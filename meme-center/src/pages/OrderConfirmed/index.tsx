@@ -4,7 +4,7 @@ import { OrderConfirmedContainer, OrderDetailsContainer } from './styles'
 import confirmedOrderIllustration from '../../assets/chemistry_cat.jpg'
 import { InfoWithIcon } from '../../components/InfoWithIcon/index'
 
-import { MapPin, Clock, CurrencyDollar } from 'phosphor-react'
+import { MapPin } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { OrderData } from '../CompleteOrder'

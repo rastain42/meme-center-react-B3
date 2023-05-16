@@ -48,14 +48,10 @@ export function MemeCard({ meme }: MemeProps) {
       <Description>{meme.description}</Description>
       <CardFooter>
         <button onClick={handleAddToCart}>
-            <DownloadSimple weight="fill" size={22} />
-          </button>
-        <button onClick={handleAddToCart}>
           <ShoppingCart weight="fill" size={22} />
         </button>
-        
       </CardFooter>
-      <FooterText>Télécharge le ou ajoute le dans ton panier</FooterText>
+      <FooterText>ajoute le dans ton panier</FooterText>
     </MemeCardContainer>
   )
 }
