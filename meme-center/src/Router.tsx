@@ -3,8 +3,7 @@ import { DefaultLayout } from './layout/Default'
 import { Home } from './pages/Home'
 import { CompleteOrderPage } from './pages/CompleteOrder'
 import { OrderConfirmedPage } from './pages/OrderConfirmed'
-import { Upload } from 'phosphor-react'
-import { UploadPage } from './pages/Upload'
+import { UploadPage } from './pages/UploadPage'
 
 export const router = createBrowserRouter([
   {
