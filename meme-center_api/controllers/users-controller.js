@@ -27,6 +27,7 @@ const usersController = {
     },
 
     sign_in(req, res) {
+        res.set('Access-Control-Allow-Origin', '*');
         User.findOne({
             email: req.body.email
         }, function (err, user) {

@@ -5,7 +5,7 @@ import { useForm, FormProvider } from 'react-hook-form'
 import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useNavigate } from 'react-router-dom'
-import { useCart } from '../../hooks/useCart'
+import axios from 'axios'
 
 export const UploadSchema = zod.object({
   name: zod.string().min(1, 'Nom du meme'),
@@ -18,23 +18,28 @@ export const UploadSchema = zod.object({
 
 export type UploadData = zod.infer<typeof UploadSchema>
 
-type ConfirmOrderFormData = UploadData
-
 export function UploadPage() {
-  const confirmOrderForm = useForm<ConfirmOrderFormData>({
+
+  const confirmOrderForm = useForm<UploadData>({
     resolver: zodResolver(UploadSchema),
   })
 
   const { handleSubmit } = confirmOrderForm
 
-  const navigate = useNavigate()
-  const { cleanCart } = useCart()
+  function handleUpload(data: UploadData) {
 
-  function handleUpload(data: ConfirmOrderFormData) {
-    navigate('/orderConfirmed', {
-      state: data,
-    })
-    cleanCart()
+    const headers = {
+      // 'Authorization': `Bearer ${token}`,
+      'Authorization': `Bearer`,
+
+    };
+    axios.post('http://localhost:3001/api/upload', data, { headers })
+    // .then(response => this.setState({ articleId: response.data.id }));
+
+    // function handleUpload(data: ConfirmOrderFormData) {
+    //   navigate('/uploadConfirmed', {
+    //     state: data,
+    //   })  
   }
 
   return (

@@ -1,6 +1,6 @@
 import { useTheme } from 'styled-components'
 import { TitleText } from '../../../components/Typography'
-import { UploadForm, UploaddForm } from './UploadForm'
+import { UploadForm } from './UploadForm'
 import { CompleteOrderFormContainer, FormSectionContainer } from './styles'
 
 export function CompleteOrderForm() {
@@ -9,10 +9,10 @@ export function CompleteOrderForm() {
   return (
     <CompleteOrderFormContainer>
       <TitleText size="xs" color="subtitle">
-        Complete ton téléchargement
+        Complète ton téléchargement
       </TitleText>
       <FormSectionContainer>
-        <UploaddForm />
+        <UploadForm />
       </FormSectionContainer>
     </CompleteOrderFormContainer>
   )

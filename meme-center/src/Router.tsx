@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { CompleteOrderPage } from './pages/CompleteOrder'
 import { OrderConfirmedPage } from './pages/OrderConfirmed'
 import { UploadPage } from './pages/UploadPage'
+import { ProfilPage } from './pages/Profil'
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/upload",
         element: <UploadPage />,
+      },
+      {
+        path: "/profil",
+        element: <ProfilPage />,
       },
     ],
   },

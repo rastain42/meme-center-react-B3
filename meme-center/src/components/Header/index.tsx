@@ -1,6 +1,6 @@
 import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 
-import { MapPin, ShoppingCart, UploadSimple } from 'phosphor-react'
+import { ShoppingCart, UploadSimple, User } from 'phosphor-react'
 
 import coffeLogoImage from '../../assets/logo.jpg'
 import { NavLink } from 'react-router-dom'
@@ -26,6 +26,11 @@ export function Header() {
           <NavLink to="/upload">
             <HeaderButton variant="purple">
               <UploadSimple size={40} weight="fill" />
+            </HeaderButton>
+          </NavLink>
+          <NavLink to="/profil">
+            <HeaderButton variant="yellow">
+              <User size={40} weight="fill" />
             </HeaderButton>
           </NavLink>
         </HeaderButtonsContainer>

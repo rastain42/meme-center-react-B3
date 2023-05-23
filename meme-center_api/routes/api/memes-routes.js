@@ -7,7 +7,7 @@ const {
 
 router.route('/').get(getAll)
 
-router.route('/').post(upload)
+router.route('/upload').post(upload)
 
 module.exports = router;
 
